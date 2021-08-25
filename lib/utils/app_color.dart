@@ -7,6 +7,9 @@ class AppColor {
   static Color childOfLight = const Color(0xffF0F3F8);
   static Color monarchWing = const Color(0xffFF9124);
   static Color blueZephir = const Color(0xff596279);
+
+  static Color cloudless = const Color(0xffDBE6FF);
+
   static Color propheticSea = const Color(0xff7F8A9C);
   static Color extreme = const Color(0xff525C77);
   static Color pinkLemonade = const Color(0xffFEEAEB);
