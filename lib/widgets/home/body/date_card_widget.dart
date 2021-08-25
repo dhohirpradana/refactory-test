@@ -52,10 +52,8 @@ class DateCardWidget extends StatelessWidget {
                             Icon(
                               Icons.circle,
                               color: (now.day == _date.day &&
-                                          now.month == _date.month ||
-                                      _date.day == now.day + 3 ||
-                                      _date.day == now.day + 4 ||
-                                      _date.day == now.day + 7)
+                                      now.month == _date.month &&
+                                      now.year == _date.year)
                                   ? AppColor.monarchWing
                                   : Colors.transparent,
                               size: 7.sp,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/widgets/header_widget.dart';
+import 'package:todo_app/widgets/home/header_widget.dart';
 import 'package:todo_app/widgets/home/body_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +14,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: const [HeaderWidget(), BodyWidget()],
+        children: const [
+          HeaderWidget(),
+          BodyWidget(),
+        ],
       ),
     );
   }

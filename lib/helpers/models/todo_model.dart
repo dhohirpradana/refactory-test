@@ -16,7 +16,7 @@ class TodoModel {
       "uid": uid,
       "title": title,
       "start": timeStart,
-      "end": timeStart,
+      "end": timeEnd,
       "is_complete": isComplete,
     };
   }

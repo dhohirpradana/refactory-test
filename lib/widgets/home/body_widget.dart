@@ -6,6 +6,7 @@ import 'package:todo_app/helpers/models/todo_model.dart';
 import 'package:todo_app/helpers/state_store.dart';
 import 'package:todo_app/utils/app_color.dart';
 import 'package:todo_app/widgets/home/body/todo_list.dart';
+import 'package:todo_app/widgets/home/bottom_nav_bar/bottom_navigation_widget.dart';
 import 'body/date_card_widget.dart';
 import 'body/today_widget.dart';
 
@@ -20,20 +21,21 @@ class _BodyWidgetState extends State<BodyWidget> {
   Future<void> addTodo() async {
     var _now = DateTime.now();
     var _cDate = DateTime(2021, 08, 25, 11, 30);
-    final data = await todoDbProvider.addTodo(TodoModel(
+    await todoDbProvider.addTodo(TodoModel(
       _now.millisecondsSinceEpoch,
       1,
-      "hai",
+      "Sudah saatnya",
       _now.toString(),
       _cDate.toString(),
       0,
     ));
+    setState(() {});
   }
 
   @override
   void initState() {
     super.initState();
-    addTodo();
+    // addTodo();
   }
 
   @override
@@ -56,7 +58,7 @@ class _BodyWidgetState extends State<BodyWidget> {
             now: _now,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16.sp, top: 40.sp),
+            padding: EdgeInsets.only(left: 16.sp, top: 40.h),
             child: Row(
               children: [
                 Column(
@@ -71,14 +73,16 @@ class _BodyWidgetState extends State<BodyWidget> {
                             color: AppColor.extreme),
                       ),
                     ),
-                    Padding(
-                        padding: EdgeInsets.only(top: 20.h),
-                        child: const TodoListWidget()),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    const TodoListWidget(),
                   ],
                 ),
               ],
             ),
-          )
+          ),
+          const BottomNavBarWidget(),
         ],
       ),
     );

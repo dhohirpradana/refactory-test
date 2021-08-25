@@ -28,14 +28,20 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
+  date_time_picker: ^2.1.0
+  firebase_auth: ^3.0.2
+  firebase_core: ^1.5.0
   flutter:
     sdk: flutter
   flutter_screenutil: ^5.0.0+2
   google_fonts: ^2.1.0
+  google_sign_in: ^5.0.7
+  http: ^0.13.3
   infinite_listview: ^1.1.0
   intl: ^0.17.0
   path: ^1.8.0
   path_provider: ^2.0.2
+  provider: ^6.0.0
   sqflite: ^2.0.0+4
 
 dev_dependencies:

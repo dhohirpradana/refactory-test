@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:todo_app/screens/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_app/helpers/provider/todo_provider.dart';
+import 'package:todo_app/screens/foundation_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'utils/behavior.dart';
+
+void main() async {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => TodoProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +31,13 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: const HomeScreen(),
+              builder: (context, child) {
+                return ScrollConfiguration(
+                  behavior: MyBehavior(),
+                  child: child!,
+                );
+              },
+              home: const FoundationScreen(),
             ));
   }
 }
