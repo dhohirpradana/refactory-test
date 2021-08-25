@@ -1,6 +1,14 @@
 # todo_app
 
-A new Flutter project.
+REFACTORY
+
+DIR Project Todo App
+
+logic test && json manipulation ada di folder test
+
+
+Dhohir Pradana
+201751068@std.umk.ac.id
 
 ## Getting Started
 
